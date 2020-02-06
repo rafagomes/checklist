@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {
+    BrowserRouter as Router,
+    Switch
+} from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import MainTemplate from './components/templates/main';
+import CreateChecklist from './components/pages/create-checklist';
+import AdminTemplate from './components/templates/admin';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function App(){
+    return (
+        <Router>
+            <Switch>
+                <MainTemplate path="/" exact component={CreateChecklist} />
+                <AdminTemplate path="/admin" component={CreateChecklist} />
+            </Switch>
+        </Router>
+    )
+};
+
+
+ReactDOM.render(<App />, document.querySelector('#root'));
