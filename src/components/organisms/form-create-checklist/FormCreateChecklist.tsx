@@ -1,33 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Form, Formik, FormikValues, FormikProps} from 'formik';
-import M from 'materialize-css';
 
-import Input from '../../atoms/input';
+import Field from '../../molecules/Field';
 
 interface Values {
-    nameField: string
+    name: string
 }
 
 interface OtherProps {
     label: string
 }
 
-function CreateForm() {
+function FormCreateChecklist() {
 
     const handleSubmit = (values:FormikValues) => {
         console.log(values);
     }
 
-    useEffect(() => {
-        M.updateTextFields();
-    });
-
     return (
-        <Formik initialValues={{nameField: '',}}onSubmit={handleSubmit}>
+        <Formik initialValues={{name: '',}}onSubmit={handleSubmit}>
             {(props: OtherProps & FormikProps<Values>) => (
                 <Form>
                     <div className="row">
-                        <Input label="Name" name="nameField" type="text" />
+                        <Field label="Name" name="name" />
                     </div>
                 </Form>
             )}
@@ -35,4 +30,4 @@ function CreateForm() {
     );
 }
 
-export default CreateForm;
+export default FormCreateChecklist;

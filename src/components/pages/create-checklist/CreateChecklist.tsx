@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import M from 'materialize-css';
 
-import CreateForm from '../../molecules/create-form';
+import FormCreateChecklist from '../../organisms/form-create-checklist';
 
 function CreateChecklist() {
+    
+    useEffect(() => {
+        M.updateTextFields();
+    });
 
     return(
-        <div className="container">
-            <CreateForm />
-        </div>
+        <FormCreateChecklist />
     );
 }
 

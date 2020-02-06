@@ -5,7 +5,9 @@ function AdminTemplate(props:RouteProps) {
     return (
         <Fragment>
             <h1>Admin Template</h1>
-            <Route {...props} />
+            <div className="container">
+                <Route {...props} />
+            </div>
         </Fragment>
     )
 } 
