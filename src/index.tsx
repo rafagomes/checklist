@@ -4,6 +4,7 @@ import {
     BrowserRouter as Router,
     Switch
 } from 'react-router-dom';
+import 'materialize-css/dist/css/materialize.min.css';
 
 import MainTemplate from './components/templates/main';
 import CreateChecklist from './components/pages/create-checklist';

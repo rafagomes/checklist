@@ -2,7 +2,9 @@ import React from 'react';
 
 function CreateChecklist() {
     return(
-        <div>Create Checklist</div>
+        <div className="container">
+            
+        </div>
     );
 }
 
