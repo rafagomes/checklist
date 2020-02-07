@@ -1,7 +1,8 @@
 import React from 'react';
 import {Form, Formik, FormikValues, FormikProps} from 'formik';
 
-import Field from '../../molecules/Field';
+import Field from '../../molecules/field';
+import Button from '../../atoms/button';
 
 interface Values {
     name: string
@@ -18,11 +19,20 @@ function FormCreateChecklist() {
     }
 
     return (
-        <Formik initialValues={{name: '',}}onSubmit={handleSubmit}>
+        <Formik initialValues={{name: '', type: '', airplane_model: ''}}onSubmit={handleSubmit}>
             {(props: OtherProps & FormikProps<Values>) => (
                 <Form>
                     <div className="row">
                         <Field label="Name" name="name" />
+                    </div>
+                    <div className="row">
+                        <Field label="Type of checklist" name="type" />
+                    </div>
+                    <div className="row">
+                        <Field label="Airplane model" name="airplane_model" />
+                    </div>
+                    <div className="row">
+                        <Button type="submit" text="Enviar"  />
                     </div>
                 </Form>
             )}
