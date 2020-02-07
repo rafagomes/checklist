@@ -9,7 +9,6 @@ import 'materialize-css/dist/css/materialize.min.css';
 import MainTemplate from './components/templates/main';
 import CreateChecklist from './components/pages/create-checklist';
 import AdminTemplate from './components/templates/admin';
-import {getGithubAuth} from './services/checklistService/checklistService';
 
 function App(){
     return (
