@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Fabricant(models.Model):
@@ -8,11 +7,13 @@ class Fabricant(models.Model):
     fabricant_logo = models.ImageField(upload_to='fabricants-logos')
     
     objects = models.Manager()
-    
+
 '''
 class AirplaneModel(models.Model):
     airplane_model_name = models.CharField(max_length=120)
     fabricant = models.ForeignKey(Fabricant, on_delete=models.CASCADE)
 
 class Checklist(models.Model):
+    checklist_name = models.CharField(max_length=100)
+    Fabricant = models.ForeignKey
 '''

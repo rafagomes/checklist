@@ -16,4 +16,4 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class FabricantSerialize(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Fabricant
-        fields = ['fabricant_name', 'fabricant_logo']
+        fields = ['id', 'fabricant_name', 'fabricant_logo']

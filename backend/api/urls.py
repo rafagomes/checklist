@@ -1,6 +1,8 @@
 from django.urls import include, path
 from rest_framework import routers
 from djoser.urls import authtoken
+from django.conf import settings
+from  django.conf.urls.static import static
 
 from api.app import views
 
@@ -15,4 +17,4 @@ urlpatterns = [
     path('api/v1/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/v1/auth/', include(authtoken)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
