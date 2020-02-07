@@ -26,7 +26,7 @@ function FormCreateChecklist() {
                         <Field label="Name" name="name" />
                     </div>
                     <div className="row">
-                        <Field label="Type of checklist" name="type" />
+                        <Field label="Checklist type" name="type" />
                     </div>
                     <div className="row">
                         <Field label="Airplane model" name="airplane_model" />
