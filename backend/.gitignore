@@ -8,11 +8,9 @@
 .tox/
 __pycache__
 MANIFEST
-dist/
-docs/_build/
-docs/locale/
-node_modules/
+*.sqlite3
+*.backup
+media/
 tests/coverage_html/
 tests/.coverage
-build/
 tests/report/
