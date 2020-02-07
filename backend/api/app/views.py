@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from api.app.serializers import UserSerializer, GroupSerializer
+from api.app.models import Fabricant
+from api.app.serializers import UserSerializer, GroupSerializer, FabricantSerialize
 from rest_framework.authtoken.models import Token
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -19,3 +20,10 @@ class GroupViewSet(viewsets.ModelViewSet):
 
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class FabricantViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows fabricants to be viewed or edited.
+    """
+    queryset = Fabricant.objects.all()
+    serializer_class = FabricantSerialize
